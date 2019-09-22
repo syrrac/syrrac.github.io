@@ -1,23 +1,57 @@
-body {
-  background-color: white;
+#container {
+  margin-top: 50px;
 }
 
-h2 {
+#search-container {
   text-align: center;
-  color: black;
-}
-
-#artist-dir {
-    text-align: center;
   border-style: solid;
   border-width: thin;
-  border-color: lightgray;
-  margin-top: 100px;
+  border-color: #f2f2f2;
+  border-radius: 5px;
   margin: 0 auto;
-  width: 75%;
+  width: 30%;
 }
 
 input[type="text"] {
-    width: 80%;
-    padding: 5px;
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-color: #f2f2f2;
+  border-radius: 5px;
+  border-width: thin;
+}
+
+.artist-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 25%;
+  margin-top: 0px;
+}
+
+img {
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.artists {
+  border-style: solid;
+  border-width: thin;
+  border-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.artist-desc {
+
+}
+
+.artist-name {
+  display: block;
+}
+
+.artist-school {
+  display: block;
 }
