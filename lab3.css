@@ -2,31 +2,69 @@
     margin-top: 50px;
   }
   
-  /* h1 {
-    font-family: 'Oswald', sans-serif;
-  } */
-  
   #search-container {    
     font-family: 'Oswald', sans-serif;
     text-align: center;
     border: thin solid #e6e6e6;
     border-radius: 5px;
     margin: 0 auto;
-    width: 35%;
+    width: 45%;
   }
   
-  input[type="text"] {
+ #search-bar {
     width: 80%;
-    padding: 5px;
+    padding: 8px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: thin solid #e6e6e6;
+    font: 14px 'Oswald', sans-serif;
+    outline: none;
   }
   
-  button {
+  .grey-bt {
     padding: 5px;
     font: 14px 'Oswald', sans-serif;
     border-radius: 5px;
     border: thin solid #e6e6e6;
     background-color:#f2f2f2;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 2px #999;
+  }
+
+  .grey-bt:hover {
+    background-color: #e6e6e6;
+  }
+
+  .grey-bt:active {
+    background-color: #e6e6e6;
+    transform: translateY(2px);
+    box-shadow: 0 1px #666;
+  }
+
+  #artist-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: none; /* reappears with button onclick event displayArtistForm() */ 
+  }
+
+  .add-info {
+    border: thin solid #e6e6e6;
+    border-radius: 5px;
+    padding: 8px;
+    width: 30%;
+    font: 14px 'Oswald', sans-serif;
+    text-align: center;
+    outline: none;
+  }
+
+  .add-info::placeholder {
+    text-align: center;
+  }
+
+  #add-bt {
+    width: 10%;
+    margin-top: 5px;
   }
