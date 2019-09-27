@@ -116,7 +116,7 @@ img {
   border-color: #e6e6e6;
   padding: 20px;
   display: flex;
-  align-items: center;
+  align-items: center; /* why does deleting this make delete button big? */ 
 }
 .artist-desc {
   width: 100%;
