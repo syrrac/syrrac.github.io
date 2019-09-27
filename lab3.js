@@ -8,13 +8,46 @@ function displayArtistForm() {
     if(formDisplaySetting == "block") {
         // form is visible, hide it
         artistForm.style.display = "none";
+        clearForm();
     } else {
         // form is hidden, show it
         artistForm.style.display = "block";
     }
 }
 
-function addNewArtist() {
+function checkIfEmpty() {
+    var nameInput = document.getElementById("name-input");
+    var nameStored = nameInput.value;
+
+    var aboutInput = document.getElementById("about-input");
+    var aboutStored = aboutInput.value;
+
+    var imageInput = document.getElementById("image-input");
+    var imageStored = imageInput.value;
+
+    if(nameStored === "" || aboutStored === "" || imageStored === "") {
+        alert("One or more fields are empty. Please fill out all fields.");
+    } else {
+        addNewArtist();
+    }
+}
+
+function clearForm() {
+    // hide artist form
+    var artistForm = document.getElementById("artist-form");
+    artistForm.style.display = "none";
+
+    // resets fields
+    var nameInput = document.getElementById("name-input");
+    var aboutInput = document.getElementById("about-input");
+    var imageInput = document.getElementById("image-input");
+
+    nameInput.value = "";
+    aboutInput.value = "";
+    imageInput.value = "";
+}
+
+function createArtistHTML() {
     // creates and appends div.artists
     var artistDiv = document.createElement("div");
     artistDiv.setAttribute("class", "artists");
@@ -51,35 +84,36 @@ function addNewArtist() {
     artistDiv.appendChild(deleteBtn);
     
     console.log(artistContainer);
+}
 
-    /****** APPEND USER INPUT TO ARTIST CONTAINER ******/
-
+function addNewArtist() {
+    createArtistHTML(); 
+    
     // get the input from Name field
     var nameInput = document.getElementById("name-input");
     var nameStored = nameInput.value;
     // console.log(nameStored);
-    artistNameSpan.append(nameStored);
+    var artistNameSpan = document.getElementsByClassName("artist-name")[0];
+    // artistNameSpan.appendChild(nameStored);
+    var nameText = document.createTextNode(nameStored);
+    artistNameSpan.appendChild(nameText);
 
     // get input from About field
     var aboutInput = document.getElementById("about-input");
     var aboutStored = aboutInput.value;
     // console.log(aboutStored);
-    schoolSpan.append(aboutStored);
+    var schoolSpan = document.getElementsByClassName("artist-school")[0];
+    // schoolSpan.appendChild(aboutStored);
+    var schoolText = document.createTextNode(aboutStored);
+    schoolSpan.appendChild(schoolText);
 
     // get input from Image URL field
+    var img = document.getElementsByTagName("img")[0]; 
     var imageInput = document.getElementById("image-input");
     var imageStored = imageInput.value;
     // console.log(imageStored);
     img.setAttribute("src", imageStored);
 
-    /****** CLEAR AND HIDE FORM ******/
-
-    // hide artist form
-    var artistForm = document.getElementById("artist-form");
-    artistForm.style.display = "none";
-
-    // resets fields
-    nameInput.value = "";
-    aboutInput.value = "";
-    imageInput.value = "";
+    // clears and hides form
+    clearForm();
 }
