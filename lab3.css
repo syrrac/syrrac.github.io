@@ -55,7 +55,7 @@
   color: white;
   cursor: pointer;
   outline: none;
-  box-shadow: 0 2px #999
+  box-shadow: 0 2px #999; 
 }
 
 .delete-btn:hover {
@@ -116,7 +116,7 @@ img {
   border-color: #e6e6e6;
   padding: 20px;
   display: flex;
-  align-items: center; /* why does deleting this make delete button big? */ 
+  align-items: center; /* solved: https://stackoverflow.com/questions/35223471/flex-property-messes-with-button-height */ 
 }
 .artist-desc {
   width: 100%;
