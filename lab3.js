@@ -30,6 +30,7 @@ function addNewArtist() {
     artistDescDiv.setAttribute("class", "artist-desc");
     artistDiv.appendChild(artistDescDiv);
 
+    // creates the artist name and artist school spans and appends to div.artist-desc
     var artistNameSpan = document.createElement("span");
     artistNameSpan.setAttribute("class", "artist-name");
     var artistNameBold = document.createElement("b");
@@ -39,6 +40,46 @@ function addNewArtist() {
     var schoolSpan = document.createElement("span");
     schoolSpan.setAttribute("class", "artist-school");
     artistDescDiv.appendChild(schoolSpan);
+
+    // creates delete button 
+    var deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute("class", "delete-btn");
+    deleteBtn.setAttribute("type", "button");
+    deleteBtn.setAttribute("onclick", "");
+    var deleteText = document.createTextNode("Delete");
+    deleteBtn.appendChild(deleteText);
+    artistDiv.appendChild(deleteBtn);
     
     console.log(artistContainer);
+
+    /****** APPEND USER INPUT TO ARTIST CONTAINER ******/
+
+    // get the input from Name field
+    var nameInput = document.getElementById("name-input");
+    var nameStored = nameInput.value;
+    // console.log(nameStored);
+    artistNameSpan.append(nameStored);
+
+    // get input from About field
+    var aboutInput = document.getElementById("about-input");
+    var aboutStored = aboutInput.value;
+    // console.log(aboutStored);
+    schoolSpan.append(aboutStored);
+
+    // get input from Image URL field
+    var imageInput = document.getElementById("image-input");
+    var imageStored = imageInput.value;
+    // console.log(imageStored);
+    img.setAttribute("src", imageStored);
+
+    /****** CLEAR AND HIDE FORM ******/
+
+    // hide artist form
+    var artistForm = document.getElementById("artist-form");
+    artistForm.style.display = "none";
+
+    // resets fields
+    nameInput.value = "";
+    aboutInput.value = "";
+    imageInput.value = "";
 }
