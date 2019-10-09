@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 3</title>
+        <link rel="stylesheet" href="lab4.css">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Oswald&display=swap" rel="stylesheet">
+        <script src="lab4.js" defer></script>
+    </head>
+
+    <body>
+        <!-- START OF CONTAINER -->
+        <div id="container">
+            
+            <!-- START OF SEARCH CONTAINER-->
+            <div id="search-container">
+                <div id="inner-search-container">
+                    <h1>Artist Directory</h1>
+                    <form>
+                        <input type="text" placeholder= "Search artist..." id="search-bar">
+                        <button type="button" class= "grey-btn" id="search-bt" onclick="searchArtists()">Search</button>
+                        <button type="button" class= "grey-btn" id="add-artist-bt" onclick="displayArtistForm()">Add</button>
+                    </form>
+                </div>
+            </div>
+            <!-- END OF SEARCH CONTAINER--> 
+
+            <!-- START OF ARTIST FORM -->
+            <div id="artist-form">
+                <form><input class="add-info" id="name-input" placeholder="Artist name" maxlength="40" required></form>
+                <form><input class="add-info" id="about-input" placeholder="About artist" maxlength="40" required></form>
+                <form><input class="add-info" id="image-input" placeholder="Image URL" required></form>
+                <button type="button" class="grey-btn" id="add-btn" onclick="getUserInput()">Add</button>
+            </div>
+            <!-- END OF ARTIST FORM -->
+
+            <!-- START OF ARTISTS CONTAINER -->
+            <div class="artist-container">
+                <!-- addnewArtist() will insert new artists here -->
+            </div>
+            <!-- END OF ARTISTS CONTAINER -->
+
+        </div>
+        <!-- END OF CONTAINER -->
+    </body>
+</html>
