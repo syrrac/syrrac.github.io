@@ -1,0 +1,138 @@
+/***** CONTAINER *****/
+#container {
+  margin-top: 50px;
+}
+
+/***** SEARCH CONTAINER *****/
+#search-container {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  border: thin solid #e6e6e6;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 45%;
+}
+
+#search-bar {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: thin solid #e6e6e6;
+  font: 14px "Oswald", sans-serif;
+  outline: none;
+}
+
+/*****  BUTTONS *****/
+.grey-btn {
+  padding: 5px;
+  font: 14px "Oswald", sans-serif;
+  border-radius: 5px;
+  border: thin solid #e6e6e6;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px #999;
+}
+
+.grey-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.grey-btn:active {
+  background-color: #e6e6e6;
+  transform: translateY(2px);
+  box-shadow: 0 1px #666;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  font: 14px "Oswald", sans-serif;
+  border-radius: 5px;
+  border: thin solid #d2143a;
+  background-color: #e91640;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px #999; 
+}
+
+.delete-btn:hover {
+  background-color: #d2143a;
+}
+
+.delete-btn:active {
+  background-color: #d2143a;
+  transform: translateY(2px);
+  box-shadow: 0 1px #666;
+}
+
+/***** ARTIST FORM *****/
+#artist-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  display: none; /* reappears with button onclick event displayArtistForm() */
+}
+
+.add-info {
+  border: thin solid #e6e6e6;
+  border-radius: 5px;
+  padding: 8px;
+  width: 30%;
+  font: 14px "Oswald", sans-serif;
+  text-align: center;
+  outline: none;
+}
+
+.add-info::placeholder {
+  text-align: center;
+}
+
+#add-btn {
+  width: 10%;
+  margin-top: 5px;
+}
+
+/***** ARTIST CONTAINER *****/
+.artist-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 25%;
+  margin-top: 0px;
+}
+
+img {
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.artists {
+  border-style: solid;
+  border-width: thin;
+  border-color: #e6e6e6;
+  padding: 20px;
+  display: flex;
+  align-items: center; /* solved: https://stackoverflow.com/questions/35223471/flex-property-messes-with-button-height */ 
+}
+.artist-desc {
+  width: 100%;
+}
+
+.artists:hover {
+  background-color:#f2f2f2;
+}
+
+.artist-name {
+  display: block;
+  font-size: 20px;
+  font-family: 'EB Garamond', serif;
+}
+
+.artist-school {
+  display: block;
+  font-family: 'EB Garamond', serif;
+}
